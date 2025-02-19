@@ -30,3 +30,15 @@ function actualizarLista() {
 }
 
 //Implementa una función para sortear los amigos
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No hay nombres en la lista para sortear.");
+        return;
+    }
+    
+    const indiceGanador = Math.floor(Math.random() * amigos.length);
+    const amigoSecreto = amigos[indiceGanador];
+    
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSecreto}</strong></li>`;
+}
